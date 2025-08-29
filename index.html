@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solyn - Find Your Daily Clarity</title>
+    <meta name="description" content="Personalized motivation that evolves with you. Join our closed beta for daily inspiration, AI companion, and beautiful screensavers.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Solyn</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#beta" class="nav-link beta-cta">Join Beta</a>
+            </div>
+            <div class="nav-mobile">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-headline">Find Your Daily Clarity</h1>
+                    <p class="hero-subheadline">Feed Your Mind-Not the Algorithm</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" onclick="scrollToSection('beta')">Join Closed Beta</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('value-props')">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-app-screenshot">
+                        <img src="Solyn-Website/assets/canva/1.png" alt="Solyn App Screenshot" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section id="value-props" class="value-props">
+        <div class="container">
+            <div class="value-props-grid">
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <i data-lucide="calendar-days"></i>
+                    </div>
+                    <h3>Daily Inspiration</h3>
+                    <p>Start each day with carefully curated quotes that resonate with your journey. Build streaks and create lasting habits of motivation.</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>AI Companion</h3>
+                    <p>Intelligent support that understands your unique journey. Get personalized guidance during challenging moments when you need it most.</p>
+                </div>
+                <div class="value-prop">
+                    <div class="value-prop-icon">
+                        <i data-lucide="image"></i>
+                    </div>
+                    <h3>Beautiful Screensavers</h3>
+                    <p>Transform your favorite quotes into stunning custom wallpapers. Carry inspiration with you wherever you go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <!-- Feature 1 -->
+            <div class="feature">
+                <div class="feature-content">
+                    <h3>AI Motivation Companion</h3>
+                    <p>Your personal AI companion understands your unique journey and provides tailored motivation exactly when you need it. Whether you're facing a challenge or celebrating a victory, get support that adapts to your emotional state and personal goals.</p>
+                    <div class="feature-benefits">
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Personalized accountability check-ins</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Contextual motivation based on your mood and goals</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>24/7 support for when you need it most</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    <img src="Solyn-Website/assets/canva/2.png" alt="AI Interaction Screen" class="feature-image">
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature feature-reverse">
+                <div class="feature-content">
+                    <h3>Daily Quotes & Challenges</h3>
+                    <p>Build lasting habits with our streak system and gamified approach to personal growth. Each day brings new inspiration carefully selected to align with your current goals and challenges.</p>
+                    <div class="feature-benefits">
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Curated quotes that match your journey</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Streak tracking to build consistency</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Challenges for personal growth</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    <img src="Solyn-Website/assets/canva/3.png" alt="Daily Quote Screen" class="feature-image">
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature">
+                <div class="feature-content">
+                    <h3>Create Custom Screensavers</h3>
+                    <p>Transform your favorite quotes into beautiful custom wallpapers and screensavers. Choose from elegant typography styles, colors, and layouts to create inspiration that fits your aesthetic perfectly.</p>
+                    <div class="feature-benefits">
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Multiple typography and color options</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>High-resolution exports for any device</span>
+                        </div>
+                        <div class="benefit">
+                            <i data-lucide="check"></i>
+                            <span>Save and share your favorite designs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    <img src="Solyn-Website/assets/canva/4.png" alt="Screensaver Creator" class="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Early Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <p>"Solyn's AI companion has become my daily source of clarity. It's like having a personal coach who truly understands my journey."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Product Designer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <p>"The minimalist design and personalized quotes have transformed my morning routine. I've kept my streak for 45 days now!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <span class="author-name">Marcus Rodriguez</span>
+                            <span class="author-role">Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                        <i data-lucide="star" class="star filled"></i>
+                    </div>
+                    <p>"Creating custom screensavers with my favorite quotes is therapeutic. Solyn has made inspiration a beautiful part of my daily life."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <span class="author-name">Aria Johnson</span>
+                            <span class="author-role">Creative Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i data-lucide="download"></i>
+                    </div>
+                    <h3>Download the App</h3>
+                    <p>Get Solyn from the App Store and create your account in seconds. No complex setup required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h3>Set Your Preferences</h3>
+                    <p>Tell us about your goals, challenges, and what motivates you. Our AI learns your unique preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3>Get Daily Motivation</h3>
+                    <p>Receive personalized quotes, engage with your AI companion, and build lasting habits of clarity and motivation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closed Beta Section -->
+    <section id="beta" class="beta-signup">
+        <div class="container">
+            <div class="beta-content">
+                <h2>Be Among the First</h2>
+                <p class="beta-subheadline">Join our closed beta and help shape the future of motivation</p>
+                <form class="beta-form" id="betaForm">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Join the Waitlist</button>
+                    </div>
+                    <p class="form-note">Get early access, provide feedback, and be part of our growing community of motivated individuals.</p>
+                </form>
+                <div class="beta-success" id="betaSuccess" style="display: none;">
+                    <div class="success-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <h3>Welcome to the Solyn Community!</h3>
+                    <p>We'll be in touch soon with your early access invitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Solyn</h3>
+                        <p>Find your daily clarity through personalized motivation.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Product</h4>
+                            <a href="#features">Features</a>
+                            <a href="#how-it-works">How It Works</a>
+                            <a href="#beta">Join Beta</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#careers">Careers</a>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Solyn. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
