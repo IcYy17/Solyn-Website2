@@ -45,38 +45,38 @@ const FlameGridSection = ({
     const cols = Math.floor(dimensions.width / responsiveCellSize);
     const rows = Math.ceil(dimensions.height / responsiveCellSize);
     
-    // Adjust for mobile - reduce count on smaller screens
-    const maxLogos = dimensions.width < 640 ? 20 : dimensions.width < 1024 ? 30 : minCount;
-    const totalCells = rows * cols;
-    const logoCount = Math.min(Math.max(totalCells, maxLogos), totalCells);
-
     const logos = [];
     let count = 0;
 
-    for (let row = 0; row < rows && count < logoCount; row++) {
+    // Fill the entire grid - no artificial limits
+    for (let row = 0; row < rows; row++) {
       const isOffsetRow = row % 2 === 1;
-      const rowCols = isOffsetRow ? cols - 1 : cols;
+      const rowCols = cols; // Use full width for all rows
       const offsetX = isOffsetRow ? responsiveCellSize * 0.5 : 0;
 
-      for (let col = 0; col < rowCols && count < logoCount; col++) {
+      for (let col = 0; col < rowCols; col++) {
         const x = offsetX + col * responsiveCellSize + responsiveCellSize / 2;
         const y = row * responsiveCellSize + responsiveCellSize / 2;
         
-        logos.push({
-          id: count,
-          baseX: x,
-          baseY: y,
-          currentX: x,
-          currentY: y,
-          rotation: 0,
-          size: responsiveCellSize * 0.75 // Logo takes 75% of cell
-        });
-        count++;
+        // Only add if within bounds (accounting for offset)
+        if (x <= dimensions.width) {
+          logos.push({
+            id: count,
+            baseX: x,
+            baseY: y,
+            currentX: x,
+            currentY: y,
+            rotation: 0,
+            prevRotation: 0, // Track previous rotation for smooth transitions
+            size: responsiveCellSize * 0.75 // Logo takes 75% of cell
+          });
+          count++;
+        }
       }
     }
 
     return { logos, rows, cols, cellSize: responsiveCellSize };
-  }, [dimensions, minCount, getResponsiveCellSize]);
+  }, [dimensions, getResponsiveCellSize]);
 
   // Debounced resize handler
   const handleResize = useCallback(() => {
@@ -136,9 +136,21 @@ const FlameGridSection = ({
       const deltaY = relativeMouseY - logo.baseY;
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       
-      // Rotation: top of logo points to cursor
-      const angle = Math.atan2(deltaY, deltaX) + Math.PI / 2; // +π/2 to point top towards cursor
-      const rotation = angle * (180 / Math.PI);
+      // Calculate target rotation (top of logo points to cursor)
+      const targetAngle = Math.atan2(deltaY, deltaX) + Math.PI / 2;
+      let targetRotation = targetAngle * (180 / Math.PI);
+      
+      // Smooth rotation transition to prevent flipping
+      const currentRotation = logo.prevRotation || 0;
+      let rotationDiff = targetRotation - currentRotation;
+      
+      // Normalize to shortest rotation path (-180 to +180)
+      while (rotationDiff > 180) rotationDiff -= 360;
+      while (rotationDiff < -180) rotationDiff += 360;
+      
+      // Apply smooth interpolation
+      const newRotation = currentRotation + rotationDiff * 0.1;
+      logo.prevRotation = newRotation;
 
       // Translation: nudge toward cursor (max 8px)
       const normalizedDx = distance > 0 ? deltaX / distance : 0;
@@ -147,7 +159,7 @@ const FlameGridSection = ({
       const shiftY = normalizedDy * Math.min(maxShiftPx, distance * 0.1);
 
       // Apply transform with GPU acceleration
-      logoEl.style.transform = `translate(-50%, -50%) rotate(${rotation}deg) translate(${shiftX}px, ${shiftY}px)`;
+      logoEl.style.transform = `translate(-50%, -50%) rotate(${newRotation}deg) translate(${shiftX}px, ${shiftY}px)`;
     });
   }, [isHovering, mousePos, gridLayout.logos, maxShiftPx, prefersReducedMotion]);
 
@@ -167,17 +179,48 @@ const FlameGridSection = ({
     };
   }, [updateLogos]);
 
-  // Mouse event handlers
+  // Mouse event handlers with improved detection
   const handlePointerMove = useCallback((e) => {
     setMousePos({ x: e.clientX, y: e.clientY });
+    setIsHovering(true); // Set hovering whenever mouse moves over area
   }, []);
 
-  const handlePointerEnter = useCallback(() => {
+  const handlePointerEnter = useCallback((e) => {
     setIsHovering(true);
+    setMousePos({ x: e.clientX, y: e.clientY }); // Update position immediately
   }, []);
 
   const handlePointerLeave = useCallback(() => {
     setIsHovering(false);
+  }, []);
+
+  // Global mouse position tracking for scroll scenarios
+  useEffect(() => {
+    let rafId = null;
+    
+    const updateMousePosition = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+      
+      // Check if cursor is over our container
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        const isOver = e.clientX >= rect.left && e.clientX <= rect.right && 
+                       e.clientY >= rect.top && e.clientY <= rect.bottom;
+        setIsHovering(isOver);
+      }
+    };
+
+    const handleGlobalMouseMove = (e) => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => updateMousePosition(e));
+    };
+
+    document.addEventListener('mousemove', handleGlobalMouseMove, { passive: true });
+    
+    return () => {
+      document.removeEventListener('mousemove', handleGlobalMouseMove);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (

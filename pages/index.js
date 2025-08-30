@@ -65,7 +65,7 @@ export default function Home() {
         <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
       </Head>
 
-      <div className="min-h-screen bg-white font-['Poppins']">
+      <div className="min-h-screen bg-white font-['Poppins'] overflow-x-hidden">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-md border-b border-gray-800 z-50">
           <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-[70px]">
@@ -79,7 +79,7 @@ export default function Home() {
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-300 hover:text-white font-medium transition-colors">Features</a>
-              <a href="#how-it-works" className="text-gray-300 hover:text-white font-medium transition-colors">How It Works</a>
+              
               <button onClick={handleJoinBeta} className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-all">Join Beta</button>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="relative w-full">
+          <div className="relative w-full max-w-full">
             {/* Text Content */}
             <div className="max-w-6xl mx-auto px-6 relative z-10">
               <div className="max-w-2xl text-center lg:text-left">
@@ -115,6 +115,7 @@ export default function Home() {
                   src="/assets/canva/1-1.png" 
                   alt="Solyn App Screenshot" 
                   className="max-w-[950px] h-auto rounded-2xl"
+                  style={{ maxWidth: 'min(950px, calc(100vw - 2rem))' }}
                 />
               </div>
             </div>
@@ -125,7 +126,7 @@ export default function Home() {
                 <img 
                   src="/assets/canva/1-1.png" 
                   alt="Solyn App Screenshot" 
-                  className="max-w-[400px] h-auto rounded-2xl"
+                  className="w-full max-w-[400px] h-auto rounded-2xl"
                 />
               </div>
             </div>
@@ -176,10 +177,10 @@ export default function Home() {
         />
 
         {/* Features Section */}
-        <section id="features" className="py-20 bg-white">
+        <section id="features" className="py-40 bg-white overflow-hidden">
           <div className="max-w-6xl mx-auto px-6">
             {/* Feature 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-80">
               <div>
                 <h3 className="text-3xl font-semibold mb-6 text-gray-900">AI Motivation Companion</h3>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -206,22 +207,24 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center overflow-visible">
                 <img 
                   src="/assets/canva/collection.png" 
                   alt="AI Interaction Screen" 
-                  className="max-w-[1000px] h-auto rounded-lg"
+                  className="h-auto rounded-lg transform scale-[1.8] origin-center"
+                  style={{ width: '100%', maxWidth: 'none' }}
                 />
               </div>
             </div>
 
             {/* Feature 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-              <div className="order-2 lg:order-1 flex justify-center">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-80">
+              <div className="order-2 lg:order-1 flex justify-center overflow-visible">
                 <img 
                   src="/assets/canva/climb.png" 
                   alt="Daily Quote Screen" 
-                  className="max-w-[1000px] h-auto rounded-lg"
+                  className="h-auto rounded-lg transform scale-[1.8] origin-center"
+                  style={{ width: '100%', maxWidth: 'none' }}
                 />
               </div>
               <div className="order-1 lg:order-2">
@@ -280,11 +283,12 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center overflow-visible">
                 <img 
                   src="/assets/canva/screensaver.png" 
                   alt="Screensaver Creator" 
-                  className="max-w-[1000px] h-auto rounded-lg"
+                  className="h-auto rounded-lg transform scale-[1.8] origin-center"
+                  style={{ width: '100%', maxWidth: 'none' }}
                 />
               </div>
             </div>
@@ -316,8 +320,14 @@ export default function Home() {
             
             {/* Status Messages */}
             {bottomFormStatus === 'success' && (
-              <div className="max-w-md mx-auto mb-4 bg-green-500/20 border border-green-300/30 rounded-lg p-3">
-                <p className="text-green-100 text-sm text-center">{bottomFormMessage}</p>
+              <div className="max-w-md mx-auto mb-6 bg-white/95 backdrop-blur rounded-2xl p-6 text-center shadow-xl">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Solyn!</h3>
+                <p className="text-gray-600">{bottomFormMessage}</p>
               </div>
             )}
             
