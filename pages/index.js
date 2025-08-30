@@ -40,10 +40,11 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="max-w-6xl mx-auto px-6 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[600px]">
-              <div className="text-center lg:text-left">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+          <div className="relative w-full">
+            {/* Text Content */}
+            <div className="max-w-6xl mx-auto px-6 relative z-10">
+              <div className="max-w-2xl text-center lg:text-left">
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                   Find Your Daily Clarity
                 </h1>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -58,14 +59,27 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative animate-float">
-                  <img 
-                    src="/assets/canva/1.png" 
-                    alt="Solyn App Screenshot" 
-                    className="max-w-[280px] h-auto rounded-2xl"
-                  />
-                </div>
+            </div>
+            
+            {/* Image positioned to the right */}
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+              <div className="relative animate-float">
+                <img 
+                  src="/assets/canva/1-1.png" 
+                  alt="Solyn App Screenshot" 
+                  className="max-w-[900px] h-auto rounded-2xl"
+                />
+              </div>
+            </div>
+            
+            {/* Mobile image */}
+            <div className="lg:hidden mt-12 flex justify-center px-6">
+              <div className="relative animate-float">
+                <img 
+                  src="/assets/canva/1-1.png" 
+                  alt="Solyn App Screenshot" 
+                  className="max-w-[400px] h-auto rounded-2xl"
+                />
               </div>
             </div>
           </div>
@@ -147,9 +161,9 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <img 
-                  src="/assets/canva/2.png" 
+                  src="/assets/canva/collection.png" 
                   alt="AI Interaction Screen" 
-                  className="max-w-[300px] h-auto rounded-lg"
+                  className="max-w-[1000px] h-auto rounded-lg"
                 />
               </div>
             </div>
@@ -158,9 +172,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
               <div className="order-2 lg:order-1 flex justify-center">
                 <img 
-                  src="/assets/canva/4.png" 
+                  src="/assets/canva/climb.png" 
                   alt="Daily Quote Screen" 
-                  className="max-w-[300px] h-auto rounded-lg"
+                  className="max-w-[1000px] h-auto rounded-lg"
                 />
               </div>
               <div className="order-1 lg:order-2">
@@ -221,9 +235,9 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <img 
-                  src="/assets/canva/3.png" 
+                  src="/assets/canva/screensaver.png" 
                   alt="Screensaver Creator" 
-                  className="max-w-[300px] h-auto rounded-lg"
+                  className="max-w-[1000px] h-auto rounded-lg"
                 />
               </div>
             </div>
