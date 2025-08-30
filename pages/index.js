@@ -119,25 +119,41 @@ export default function Home() {
             </div>
             
             {/* Image positioned to the right */}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
-              <div className="relative animate-float">
-                <img 
-                  src="/assets/canva/1-1.png" 
-                  alt="Solyn App Screenshot" 
-                  className="max-w-[950px] h-auto rounded-2xl"
-                  style={{ maxWidth: 'min(950px, calc(100vw - 2rem))' }}
-                />
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block" style={{ transform: 'translateY(-50%) translateY(35px)' }}>
+              <div className="relative">
+                {/* Drop shadow circle */}
+                <div className="absolute left-[47%] bottom-[-60px] transform -translate-x-1/2 animate-shadow-pulse">
+                  <div className="w-48 h-6 bg-black/25 rounded-full blur-md"></div>
+                </div>
+                
+                {/* Main image */}
+                <div className="animate-float">
+                  <img 
+                    src="/assets/canva/1-1.png" 
+                    alt="Solyn App Screenshot" 
+                    className="max-w-[950px] h-auto rounded-2xl"
+                    style={{ maxWidth: 'min(950px, calc(100vw - 2rem))' }}
+                  />
+                </div>
               </div>
             </div>
             
             {/* Mobile image */}
             <div className="lg:hidden mt-12 flex justify-center px-6">
-              <div className="relative animate-float">
-                <img 
-                  src="/assets/canva/1-1.png" 
-                  alt="Solyn App Screenshot" 
-                  className="w-full max-w-[400px] h-auto rounded-2xl"
-                />
+              <div className="relative">
+                {/* Drop shadow circle */}
+                <div className="absolute left-[47%] bottom-[-40px] transform -translate-x-1/2 animate-shadow-pulse">
+                  <div className="w-36 h-4 bg-black/25 rounded-full blur-md"></div>
+                </div>
+                
+                {/* Main image */}
+                <div className="animate-float">
+                  <img 
+                    src="/assets/canva/1-1.png" 
+                    alt="Solyn App Screenshot" 
+                    className="w-full max-w-[400px] h-auto rounded-2xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -425,8 +441,23 @@ export default function Home() {
           50% { transform: translateY(-20px); }
         }
         
+        @keyframes shadowPulse {
+          0%, 100% { 
+            transform: translateX(-50%) scale(1);
+            opacity: 0.8;
+          }
+          50% { 
+            transform: translateX(-50%) scale(0.7);
+            opacity: 0.4;
+          }
+        }
+        
         .animate-float {
           animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-shadow-pulse {
+          animation: shadowPulse 6s ease-in-out infinite;
         }
       `}</style>
     </>
