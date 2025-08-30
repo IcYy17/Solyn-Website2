@@ -12,6 +12,16 @@ export default function Home() {
     setIsModalOpen(true);
   };
 
+  const handleLearnMore = () => {
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const handleBottomFormSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -101,7 +111,7 @@ export default function Home() {
                   <button onClick={handleJoinBeta} className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
                     Join Closed Beta
                   </button>
-                  <button className="border border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-all hover:-translate-y-0.5">
+                  <button onClick={handleLearnMore} className="border border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-all hover:-translate-y-0.5">
                     Learn More
                   </button>
                 </div>
