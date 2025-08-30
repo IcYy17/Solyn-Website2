@@ -45,11 +45,11 @@ export default function Home() {
             <div className="max-w-6xl mx-auto px-6 relative z-10">
               <div className="max-w-2xl text-center lg:text-left">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
-                  Find Your Daily Clarity
+                  Get Motivated to Scroll
                 </h1>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Feed Your Mind-Not the Algorithm
-                </p>
+                                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                    &nbsp;&nbsp;Feed Your Mind-Not the Algorithm
+                  </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
                     Join Closed Beta
@@ -67,7 +67,7 @@ export default function Home() {
                 <img 
                   src="/assets/canva/1-1.png" 
                   alt="Solyn App Screenshot" 
-                  className="max-w-[900px] h-auto rounded-2xl"
+                  className="max-w-[950px] h-auto rounded-2xl"
                 />
               </div>
             </div>
