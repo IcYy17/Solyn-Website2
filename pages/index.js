@@ -1,8 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import FlameGridSection from '../components/FlameGridSection';
+import BetaSignupModal from '../components/BetaSignupModal';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [bottomFormStatus, setBottomFormStatus] = useState('idle'); // idle, loading, success, error
+  const [bottomFormMessage, setBottomFormMessage] = useState('');
+
+  const handleJoinBeta = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleBottomFormSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+
+    setBottomFormStatus('loading');
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setBottomFormStatus('success');
+        setBottomFormMessage(data.message);
+        e.target.reset();
+        
+        // Reset status after 5 seconds
+        setTimeout(() => {
+          setBottomFormStatus('idle');
+          setBottomFormMessage('');
+        }, 5000);
+      } else {
+        setBottomFormStatus('error');
+        setBottomFormMessage(data.error || 'Something went wrong');
+      }
+    } catch (error) {
+      setBottomFormStatus('error');
+      setBottomFormMessage('Network error. Please try again.');
+    }
+  };
+
   return (
     <>
       <Head>
@@ -33,7 +80,7 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-300 hover:text-white font-medium transition-colors">Features</a>
               <a href="#how-it-works" className="text-gray-300 hover:text-white font-medium transition-colors">How It Works</a>
-              <a href="#beta" className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-all">Join Beta</a>
+              <button onClick={handleJoinBeta} className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-all">Join Beta</button>
             </div>
           </div>
         </nav>
@@ -51,7 +98,7 @@ export default function Home() {
                     &nbsp;&nbsp;Feed Your Mind-Not the Algorithm
                   </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
+                  <button onClick={handleJoinBeta} className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
                     Join Closed Beta
                   </button>
                   <button className="border border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-all hover:-translate-y-0.5">
@@ -249,20 +296,36 @@ export default function Home() {
           <div className="max-w-2xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-semibold mb-6">Be Among the First</h2>
             <p className="text-xl mb-8 opacity-90">Join our closed beta and help shape the future of motivation</p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4">
+            <form onSubmit={handleBottomFormSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4">
               <input 
                 type="email" 
+                name="email"
                 placeholder="Enter your email address" 
                 className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/40"
                 required
+                disabled={bottomFormStatus === 'loading'}
               />
               <button 
                 type="submit" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all whitespace-nowrap"
+                disabled={bottomFormStatus === 'loading'}
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Join the Waitlist
+                {bottomFormStatus === 'loading' ? 'Subscribing...' : 'Join the Waitlist'}
               </button>
             </form>
+            
+            {/* Status Messages */}
+            {bottomFormStatus === 'success' && (
+              <div className="max-w-md mx-auto mb-4 bg-green-500/20 border border-green-300/30 rounded-lg p-3">
+                <p className="text-green-100 text-sm text-center">{bottomFormMessage}</p>
+              </div>
+            )}
+            
+            {bottomFormStatus === 'error' && (
+              <div className="max-w-md mx-auto mb-4 bg-red-500/20 border border-red-300/30 rounded-lg p-3">
+                <p className="text-red-100 text-sm text-center">{bottomFormMessage}</p>
+              </div>
+            )}
             <p className="text-sm opacity-80 leading-relaxed">
               Get early access, provide feedback, and be part of our growing community of motivated individuals.
             </p>
@@ -329,6 +392,12 @@ export default function Home() {
           </div>
         </footer>
       </div>
+
+      {/* Beta Signup Modal */}
+      <BetaSignupModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
 
       <style jsx>{`
         @keyframes float {
