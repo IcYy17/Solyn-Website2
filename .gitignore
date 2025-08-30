@@ -1,5 +1,8 @@
 node_modules/
 Solyn-Website/
-
+.env
+.env.local
+.env.production
+.env.development
 .next/
 .DS_Store
