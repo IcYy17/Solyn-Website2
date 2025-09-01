@@ -78,19 +78,23 @@ export default function Home() {
       <div className="min-h-screen bg-white font-['Poppins'] overflow-x-hidden">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-md border-b border-gray-800 z-50">
-          <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-[70px]">
+          <div className="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between h-[60px] md:h-[70px]">
             <div className="flex items-center gap-3">
               <img 
                 src="/assets/Logos/Logo1.png" 
                 alt="Solyn Logo" 
-                className="w-8 h-8"
+                className="w-6 h-6 md:w-8 md:h-8"
               />
-              <div className="text-xl font-semibold text-white">Solyn</div>
+              <div className="text-lg md:text-xl font-semibold text-white">Solyn</div>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-300 hover:text-white font-medium transition-colors">Features</a>
               
               <button onClick={handleJoinBeta} className="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-all">Join Beta</button>
+            </div>
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button onClick={handleJoinBeta} className="bg-white text-black px-4 py-1.5 rounded-lg font-medium text-sm hover:bg-gray-100 transition-all">Join Beta</button>
             </div>
           </div>
         </nav>
@@ -99,19 +103,19 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="relative w-full max-w-full">
             {/* Text Content */}
-            <div className="max-w-6xl mx-auto px-6 relative z-10">
+            <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10 pt-20 md:pt-0">
               <div className="max-w-2xl text-center lg:text-left">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                   Get Motivated to Scroll
                 </h1>
-                                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                    &nbsp;&nbsp;Feed Your Mind-Not the Algorithm
-                  </p>
+                <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                  &nbsp;&nbsp;Feed Your Mind-Not the Algorithm
+                </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <button onClick={handleJoinBeta} className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
+                  <button onClick={handleJoinBeta} className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium hover:bg-blue-700 transition-all hover:-translate-y-0.5 shadow-lg">
                     Join Closed Beta
                   </button>
-                  <button onClick={handleLearnMore} className="border border-gray-300 text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-all hover:-translate-y-0.5">
+                  <button onClick={handleLearnMore} className="border border-gray-300 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium hover:bg-gray-50 transition-all hover:-translate-y-0.5">
                     Learn More
                   </button>
                 </div>
@@ -139,7 +143,7 @@ export default function Home() {
             </div>
             
             {/* Mobile image */}
-            <div className="lg:hidden mt-12 flex justify-center px-6">
+            <div className="lg:hidden mt-16 mb-8 flex justify-center px-4">
               <div className="relative">
                 {/* Drop shadow circle */}
                 <div className="absolute left-[47%] bottom-[-40px] transform -translate-x-1/2 animate-shadow-pulse">
@@ -151,7 +155,7 @@ export default function Home() {
                   <img 
                     src="/assets/canva/1-1.png" 
                     alt="Solyn App Screenshot" 
-                    className="w-full max-w-[400px] h-auto rounded-2xl"
+                    className="w-full max-w-[350px] h-auto rounded-2xl"
                   />
                 </div>
               </div>
@@ -160,8 +164,8 @@ export default function Home() {
         </section>
 
         {/* Value Propositions */}
-        <section id="value-props" className="py-20 bg-white">
-          <div className="max-w-6xl mx-auto px-6">
+        <section id="value-props" className="py-16 md:py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -203,13 +207,13 @@ export default function Home() {
         />
 
         {/* Features Section */}
-        <section id="features" className="py-40 bg-white overflow-hidden">
-          <div className="max-w-6xl mx-auto px-6">
+        <section id="features" className="py-16 md:py-32 lg:py-40 bg-white overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 md:px-6">
             {/* Feature 1 */}
-                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-80">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-32 lg:mb-80">
               <div>
-                <h3 className="text-3xl font-semibold mb-6 text-gray-900">AI Motivation Companion</h3>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">AI Motivation Companion</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
                   Your personal AI companion understands your unique journey and provides tailored motivation exactly when you need it. Whether you're facing a challenge or celebrating a victory, get support that adapts to your emotional state and personal goals.
                 </p>
                 <div className="space-y-4">
@@ -244,7 +248,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-80">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-32 lg:mb-80">
               <div className="order-2 lg:order-1 flex justify-center overflow-visible">
                 <img 
                   src="/assets/canva/climb.png" 
@@ -254,8 +258,8 @@ export default function Home() {
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-3xl font-semibold mb-6 text-gray-900">Daily Quotes & Challenges</h3>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">Daily Quotes & Challenges</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
                   Build lasting habits with our streak system and gamified approach to personal growth. Each day brings new inspiration carefully selected to align with your current goals and challenges.
                 </p>
                 <div className="space-y-4">
@@ -282,10 +286,10 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
-                <h3 className="text-3xl font-semibold mb-6 text-gray-900">Create Custom Screensavers</h3>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">Create Custom Screensavers</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
                   Transform your favorite quotes into beautiful custom wallpapers and screensavers. Choose from elegant typography styles, colors, and layouts to create inspiration that fits your aesthetic perfectly.
                 </p>
                 <div className="space-y-4">
@@ -322,10 +326,10 @@ export default function Home() {
         </section>
 
         {/* Beta Signup */}
-        <section id="beta" className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-          <div className="max-w-2xl mx-auto px-6 text-center">
-            <h2 className="text-4xl font-semibold mb-6">Be Among the First</h2>
-            <p className="text-xl mb-8 opacity-90">Join our closed beta and help shape the future of motivation</p>
+        <section id="beta" className="py-16 md:py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+          <div className="max-w-2xl mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 md:mb-6">Be Among the First</h2>
+            <p className="text-lg md:text-xl mb-6 md:mb-8 opacity-90">Join our closed beta and help shape the future of motivation</p>
             <form onSubmit={handleBottomFormSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-4">
               <input 
                 type="email" 
@@ -369,9 +373,9 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-black text-white py-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-wrap justify-between items-start gap-8 mb-8">
+        <footer className="bg-black text-white py-12 md:py-16">
+          <div className="max-w-6xl mx-auto px-4 md:px-6">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
               <div className="flex-1 min-w-[250px]">
                 <div className="flex items-center gap-3 mb-4">
                   <img 
@@ -385,28 +389,19 @@ export default function Home() {
                   Find your daily clarity through personalized motivation.
                 </p>
               </div>
-              <div className="flex gap-16">
+              <div className="flex flex-col sm:flex-row gap-8 md:gap-16 w-full md:w-auto">
                 <div>
                   <h4 className="font-medium mb-4">Product</h4>
-                  <div className="space-x-6">
+                  <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
                     <a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a>
-                    <a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors">How It Works</a>
                     <a href="#beta" className="text-gray-400 hover:text-white transition-colors">Join Beta</a>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-4">Company</h4>
-                  <div className="space-x-6">
-                    <a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a>
-                    <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
-                    <a href="#careers" className="text-gray-400 hover:text-white transition-colors">Careers</a>
-                  </div>
-                </div>
-                <div>
                   <h4 className="font-medium mb-4">Legal</h4>
-                  <div className="space-x-6">
-                    <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                  <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
+                    <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
                   </div>
                 </div>
               </div>
