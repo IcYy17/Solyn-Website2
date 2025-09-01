@@ -1,7 +1,7 @@
 # Brevo Email Integration Guide
 
 ## Overview
-Your Solyn website now has a complete Brevo email integration with two signup methods:
+Your Sevii website now has a complete Brevo email integration with two signup methods:
 1. **Bottom Email Form**: Located in the blue "Be Among the First" section
 2. **Beta Signup Modal**: Triggered by clicking any "Join Beta" button
 

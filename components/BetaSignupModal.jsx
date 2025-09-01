@@ -64,7 +64,7 @@ const BetaSignupModal = ({ isOpen, onClose }) => {
             </svg>
           </button>
           <h2 className="text-2xl font-semibold mb-2">Join the Beta</h2>
-          <p className="text-blue-100">Be among the first to experience Solyn</p>
+          <p className="text-blue-100">Be among the first to experience Sevii</p>
         </div>
 
         {/* Content */}
@@ -76,7 +76,7 @@ const BetaSignupModal = ({ isOpen, onClose }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Solyn!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Sevii!</h3>
               <p className="text-gray-600">{message}</p>
             </div>
           ) : (
@@ -129,7 +129,7 @@ const BetaSignupModal = ({ isOpen, onClose }) => {
               </form>
 
               <p className="text-xs text-gray-500 mt-4 text-center">
-                By joining, you agree to receive updates about Solyn. Unsubscribe anytime.
+                By joining, you agree to receive updates about Sevii. Unsubscribe anytime.
               </p>
             </>
           )}

@@ -1,6 +1,6 @@
-# Solyn Landing Page with React FlameGridSection
+# Sevii Landing Page with React FlameGridSection
 
-This is the enhanced version of the Solyn landing page featuring an interactive React component called **FlameGridSection**.
+This is the enhanced version of the Sevii landing page featuring an interactive React component called **FlameGridSection**.
 
 ## 🔥 FlameGridSection Features
 

@@ -6,8 +6,8 @@ export default function Privacy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy - Solyn</title>
-        <meta name="description" content="Solyn's Privacy Policy - How we protect and handle your personal information." />
+        <title>Privacy Policy - Sevii</title>
+        <meta name="description" content="Sevii's Privacy Policy - How we protect and handle your personal information." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,10 +22,10 @@ export default function Privacy() {
             <Link href="/" className="flex items-center gap-3">
               <img 
                 src="/assets/Logos/Logo1.png" 
-                alt="Solyn Logo" 
+                alt="Sevii Logo" 
                 className="w-6 h-6 md:w-8 md:h-8"
               />
-              <div className="text-lg md:text-xl font-semibold text-white">Solyn</div>
+              <div className="text-lg md:text-xl font-semibold text-white">Sevii</div>
             </Link>
             <Link href="/" className="text-gray-300 hover:text-white font-medium transition-colors">
               Back to Home
@@ -44,7 +44,7 @@ export default function Privacy() {
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">Introduction</h2>
                   <p>
-                    At Solyn, we're committed to protecting your privacy and ensuring transparency about how we collect, use, and protect your personal information. This Privacy Policy explains our practices regarding your data when you use our motivation and inspiration app.
+                    At Sevii, we're committed to protecting your privacy and ensuring transparency about how we collect, use, and protect your personal information. This Privacy Policy explains our practices regarding your data when you use our motivation and inspiration app.
                   </p>
                 </section>
 
@@ -137,7 +137,7 @@ export default function Privacy() {
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">Age Requirements and Children's Privacy</h2>
                   <p>
-                    You must be at least 13 years old (or 16 if required by the laws of your country) to use Solyn. We do not knowingly collect personal information from children under the required minimum age. If you become aware that a child has provided us with personal information, please contact us immediately, and we will take steps to remove such information.
+                    You must be at least 13 years old (or 16 if required by the laws of your country) to use Sevii. We do not knowingly collect personal information from children under the required minimum age. If you become aware that a child has provided us with personal information, please contact us immediately, and we will take steps to remove such information.
                   </p>
                 </section>
 
@@ -162,7 +162,7 @@ export default function Privacy() {
                   </p>
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <p><strong>Email:</strong> privacy@solyn.app</p>
-                    <p><strong>Address:</strong> Solyn Privacy Team</p>
+                    <p><strong>Address:</strong> Sevii Privacy Team</p>
                   </div>
                 </section>
               </div>
@@ -176,10 +176,10 @@ export default function Privacy() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
                 src="/assets/Logos/Logo1.png" 
-                alt="Solyn Logo" 
+                alt="Sevii Logo" 
                 className="w-6 h-6"
               />
-              <h3 className="text-xl font-semibold">Solyn</h3>
+              <h3 className="text-xl font-semibold">Sevii</h3>
             </div>
             <p className="text-gray-400 mb-4">Find your daily clarity through personalized motivation.</p>
             <div className="flex justify-center space-x-6">

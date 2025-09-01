@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Solyn - Find Your Daily Clarity</title>
+        <title>Sevii - Find Your Daily Clarity</title>
         <meta name="description" content="Feed Your Mind-Not the Algorithm. Join our closed beta for daily inspiration, AI companion, and beautiful screensavers." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/favicon.png" />
@@ -82,10 +82,10 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <img 
                 src="/assets/Logos/Logo1.png" 
-                alt="Solyn Logo" 
+                alt="Sevii Logo" 
                 className="w-6 h-6 md:w-8 md:h-8"
               />
-              <div className="text-lg md:text-xl font-semibold text-white">Solyn</div>
+              <div className="text-lg md:text-xl font-semibold text-white">Sevii</div>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-300 hover:text-white font-medium transition-colors">Features</a>
@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="animate-float">
                   <img 
                     src="/assets/canva/1-1.png" 
-                    alt="Solyn App Screenshot" 
+                    alt="Sevii App Screenshot" 
                     className="max-w-[950px] h-auto rounded-2xl"
                     style={{ maxWidth: 'min(950px, calc(100vw - 2rem))' }}
                   />
@@ -154,7 +154,7 @@ export default function Home() {
                 <div className="animate-float">
                   <img 
                     src="/assets/canva/1-1.png" 
-                    alt="Solyn App Screenshot" 
+                    alt="Sevii App Screenshot" 
                     className="w-full max-w-[450px] h-auto rounded-2xl"
                   />
                 </div>
@@ -356,7 +356,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Solyn!</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Sevii!</h3>
                 <p className="text-gray-600">{bottomFormMessage}</p>
               </div>
             )}
@@ -380,10 +380,10 @@ export default function Home() {
                 <div className="flex items-center gap-3 mb-4">
                   <img 
                     src="/assets/Logos/Logo1.png" 
-                    alt="Solyn Logo" 
+                    alt="Sevii Logo" 
                     className="w-6 h-6"
                   />
-                  <h3 className="text-xl font-semibold">Solyn</h3>
+                  <h3 className="text-xl font-semibold">Sevii</h3>
                 </div>
                 <p className="text-gray-400 leading-relaxed">
                   Find your daily clarity through personalized motivation.
@@ -418,7 +418,7 @@ export default function Home() {
               </div>
             </div>
             <div className="border-t border-gray-700 pt-6 text-center">
-              <p className="text-gray-400 text-sm">&copy; 2025 Solyn. All rights reserved.</p>
+              <p className="text-gray-400 text-sm">&copy; 2025 Sevii. All rights reserved.</p>
             </div>
           </div>
         </footer>

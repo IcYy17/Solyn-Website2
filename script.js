@@ -301,11 +301,11 @@ document.addEventListener('keydown', function(e) {
 // Preload images for better performance
 function preloadImages() {
     const images = [
-        'Solyn-Website/assets/canva/1.png',
-        'Solyn-Website/assets/canva/2.png',
-        'Solyn-Website/assets/canva/3.png',
-        'Solyn-Website/assets/canva/4.png',
-        'Solyn-Website/assets/canva/5.png'
+        'Sevii-Website/assets/canva/1.png',
+        'Sevii-Website/assets/canva/2.png',
+        'Sevii-Website/assets/canva/3.png',
+        'Sevii-Website/assets/canva/4.png',
+        'Sevii-Website/assets/canva/5.png'
     ];
     
     images.forEach(src => {

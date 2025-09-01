@@ -1,8 +1,8 @@
-# Solyn - Find Your Daily Clarity
+# Sevii - Find Your Daily Clarity
 
 > **Feed Your Mind-Not the Algorithm**
 
-A beautiful, minimalist landing page for Solyn, the motivational quotes app that helps users find clarity and motivation through daily inspiration and AI-powered guidance.
+A beautiful, minimalist landing page for Sevii, the motivational quotes app that helps users find clarity and motivation through daily inspiration and AI-powered guidance.
 
 ## ✨ Features
 
@@ -26,9 +26,9 @@ Experience the interactive flame grid and clean design at: **[Your URL Here]**
 - **Typography**: Poppins font family
 - **Hosting**: Ready for Vercel deployment
 
-## 🎯 About Solyn
+## 🎯 About Sevii
 
-Solyn is a motivational quotes app designed to provide:
+Sevii is a motivational quotes app designed to provide:
 
 - **Daily Inspiration** - Curated quotes with streak tracking
 - **AI Companion** - Personalized motivation based on your mood and goals  
@@ -100,14 +100,14 @@ Inspired by Linear.app's clean aesthetic:
 
 ## 📄 License
 
-This project is for Solyn - a motivational quotes application. All rights reserved.
+This project is for Sevii - a motivational quotes application. All rights reserved.
 
 ## 🤝 Contributing
 
-This is a showcase project for Solyn. For inquiries about the app or collaboration opportunities, please reach out through the contact form on the website.
+This is a showcase project for Sevii. For inquiries about the app or collaboration opportunities, please reach out through the contact form on the website.
 
 ---
 
 **Built with ❤️ for those seeking daily clarity and motivation**
 
-*© 2025 Solyn. All rights reserved.*
+*© 2025 Sevii. All rights reserved.*

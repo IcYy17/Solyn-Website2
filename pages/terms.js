@@ -6,8 +6,8 @@ export default function Terms() {
   return (
     <>
       <Head>
-        <title>Terms of Service - Solyn</title>
-        <meta name="description" content="Solyn's Terms of Service - Legal terms and conditions for using our motivation app." />
+        <title>Terms of Service - Sevii</title>
+        <meta name="description" content="Sevii's Terms of Service - Legal terms and conditions for using our motivation app." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,10 +22,10 @@ export default function Terms() {
             <Link href="/" className="flex items-center gap-3">
               <img 
                 src="/assets/Logos/Logo1.png" 
-                alt="Solyn Logo" 
+                alt="Sevii Logo" 
                 className="w-6 h-6 md:w-8 md:h-8"
               />
-              <div className="text-lg md:text-xl font-semibold text-white">Solyn</div>
+              <div className="text-lg md:text-xl font-semibold text-white">Sevii</div>
             </Link>
             <Link href="/" className="text-gray-300 hover:text-white font-medium transition-colors">
               Back to Home
@@ -44,14 +44,14 @@ export default function Terms() {
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Agreement to Terms</h2>
                   <p>
-                    By accessing and using Solyn ("the App," "our Service"), you accept and agree to be bound by these Terms. If you do not agree, please do not use the Service.
+                    By accessing and using Sevii ("the App," "our Service"), you accept and agree to be bound by these Terms. If you do not agree, please do not use the Service.
                   </p>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
                   <p>
-                    Solyn is a personal motivation and inspiration app that provides:
+                    Sevii is a personal motivation and inspiration app that provides:
                   </p>
                   <ul className="list-disc pl-6 space-y-2 mt-4">
                     <li>Daily curated quotes and motivational content</li>
@@ -66,7 +66,7 @@ export default function Terms() {
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. User Accounts</h2>
                   <div className="space-y-4">
                     <p>
-                      To access certain features of Solyn, you must create an account. You agree to:
+                      To access certain features of Sevii, you must create an account. You agree to:
                     </p>
                     <ul className="list-disc pl-6 space-y-2">
                       <li>Provide accurate, current, and complete information during registration</li>
@@ -80,7 +80,7 @@ export default function Terms() {
 
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Acceptable Use</h2>
-                  <p>You agree not to use Solyn to:</p>
+                  <p>You agree not to use Sevii to:</p>
                   <ul className="list-disc pl-6 space-y-2 mt-4">
                     <li>Violate any local, state, national, or international law</li>
                     <li>Transmit any harmful, offensive, or inappropriate content</li>
@@ -108,7 +108,7 @@ export default function Terms() {
                       <p className="text-red-700">If you are experiencing thoughts of self-harm, a medical emergency, or any crisis, do not use this App. Call 911 (or your local emergency number) immediately.</p>
                     </div>
                     <p className="font-medium">
-                      Solyn disclaims all responsibility for any harm, injury, or loss that may result from reliance on AI responses.
+                      Sevii disclaims all responsibility for any harm, injury, or loss that may result from reliance on AI responses.
                     </p>
                   </div>
                 </section>
@@ -117,7 +117,7 @@ export default function Terms() {
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Intellectual Property</h2>
                   <div className="space-y-4">
                     <p>
-                      The Service and its original content, features, and functionality are owned by Solyn and protected by international intellectual property laws.
+                      The Service and its original content, features, and functionality are owned by Sevii and protected by international intellectual property laws.
                     </p>
                     <p>
                       You retain ownership of content you create (such as custom screensavers), but grant us a license to host and display it for the purpose of providing the Service.
@@ -167,7 +167,7 @@ export default function Terms() {
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Indemnification</h2>
                   <p>
-                    You agree to indemnify, defend, and hold harmless Solyn, its officers, directors, employees, and affiliates from and against any claims, damages, obligations, losses, liabilities, costs, or expenses (including attorney's fees) arising from:
+                    You agree to indemnify, defend, and hold harmless Sevii, its officers, directors, employees, and affiliates from and against any claims, damages, obligations, losses, liabilities, costs, or expenses (including attorney's fees) arising from:
                   </p>
                   <ul className="list-disc pl-6 space-y-2 mt-4">
                     <li>Your use of and access to the Service</li>
@@ -180,7 +180,7 @@ export default function Terms() {
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Age Restrictions</h2>
                   <p>
-                    You must be at least 13 years old (or 16 if required by the laws of your country) to use Solyn. By using the Service, you represent and warrant that you meet this requirement.
+                    You must be at least 13 years old (or 16 if required by the laws of your country) to use Sevii. By using the Service, you represent and warrant that you meet this requirement.
                   </p>
                 </section>
 
@@ -212,7 +212,7 @@ export default function Terms() {
                   </p>
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <p><strong>Email:</strong> legal@solyn.app</p>
-                    <p><strong>Address:</strong> Solyn Legal Team</p>
+                    <p><strong>Address:</strong> Sevii Legal Team</p>
                   </div>
                 </section>
 
@@ -233,10 +233,10 @@ export default function Terms() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <img 
                 src="/assets/Logos/Logo1.png" 
-                alt="Solyn Logo" 
+                alt="Sevii Logo" 
                 className="w-6 h-6"
               />
-              <h3 className="text-xl font-semibold">Solyn</h3>
+              <h3 className="text-xl font-semibold">Sevii</h3>
             </div>
             <p className="text-gray-400 mb-4">Find your daily clarity through personalized motivation.</p>
             <div className="flex justify-center space-x-6">

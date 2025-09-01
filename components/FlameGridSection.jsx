@@ -229,7 +229,7 @@ const FlameGridSection = ({
       aria-hidden="true"
     >
       {/* Visually hidden heading for accessibility */}
-      <h2 className="sr-only">Solyn flame field (interactive)</h2>
+      <h2 className="sr-only">Sevii flame field (interactive)</h2>
       
       {/* Optional subtle vignette for depth */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20 pointer-events-none" />
