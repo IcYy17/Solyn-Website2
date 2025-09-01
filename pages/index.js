@@ -147,7 +147,7 @@ export default function Home() {
               <div className="relative">
                 {/* Drop shadow circle */}
                 <div className="absolute left-[47%] bottom-[-40px] transform -translate-x-1/2 animate-shadow-pulse">
-                  <div className="w-36 h-4 bg-black/25 rounded-full blur-md"></div>
+                  <div className="w-44 h-5 bg-black/25 rounded-full blur-md"></div>
                 </div>
                 
                 {/* Main image */}
@@ -155,7 +155,7 @@ export default function Home() {
                   <img 
                     src="/assets/canva/1-1.png" 
                     alt="Solyn App Screenshot" 
-                    className="w-full max-w-[350px] h-auto rounded-2xl"
+                    className="w-full max-w-[450px] h-auto rounded-2xl"
                   />
                 </div>
               </div>
@@ -207,16 +207,16 @@ export default function Home() {
         />
 
         {/* Features Section */}
-        <section id="features" className="py-16 md:py-32 lg:py-40 bg-white overflow-hidden">
+        <section id="features" className="py-20 md:py-32 lg:py-40 bg-white overflow-hidden">
           <div className="max-w-6xl mx-auto px-4 md:px-6">
             {/* Feature 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-32 lg:mb-80">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 md:gap-16 lg:gap-12 items-center mb-32 md:mb-32 lg:mb-80">
               <div>
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">AI Motivation Companion</h3>
-                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-6 text-gray-900">AI Motivation Companion</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-8 leading-relaxed">
                   Your personal AI companion understands your unique journey and provides tailored motivation exactly when you need it. Whether you're facing a challenge or celebrating a victory, get support that adapts to your emotional state and personal goals.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6 md:space-y-4">
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -237,7 +237,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center overflow-visible">
+              <div className="flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
                   src="/assets/canva/collection.png" 
                   alt="AI Interaction Screen" 
@@ -248,8 +248,8 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-32 lg:mb-80">
-              <div className="order-2 lg:order-1 flex justify-center overflow-visible">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 md:gap-16 lg:gap-12 items-center mb-32 md:mb-32 lg:mb-80">
+              <div className="order-2 lg:order-1 flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
                   src="/assets/canva/climb.png" 
                   alt="Daily Quote Screen" 
@@ -258,11 +258,11 @@ export default function Home() {
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">Daily Quotes & Challenges</h3>
-                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-6 text-gray-900">Daily Quotes & Challenges</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-8 leading-relaxed">
                   Build lasting habits with our streak system and gamified approach to personal growth. Each day brings new inspiration carefully selected to align with your current goals and challenges.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6 md:space-y-4">
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -286,13 +286,13 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 md:gap-16 lg:gap-12 items-center">
               <div>
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-gray-900">Create Custom Screensavers</h3>
-                <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-6 text-gray-900">Create Custom Screensavers</h3>
+                <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-8 leading-relaxed">
                   Transform your favorite quotes into beautiful custom wallpapers and screensavers. Choose from elegant typography styles, colors, and layouts to create inspiration that fits your aesthetic perfectly.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6 md:space-y-4">
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -313,7 +313,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center overflow-visible">
+              <div className="flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
                   src="/assets/canva/screensaver.png" 
                   alt="Screensaver Creator" 
