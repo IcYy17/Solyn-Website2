@@ -211,7 +211,7 @@ export default function Terms() {
                     If you have any questions about these Terms of Service, please contact us:
                   </p>
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                    <p><strong>Email:</strong> legal@solyn.app</p>
+                    <p><strong>Email:</strong> latenitellc@gmail.com</p>
                     <p><strong>Address:</strong> Sevii Legal Team</p>
                   </div>
                 </section>

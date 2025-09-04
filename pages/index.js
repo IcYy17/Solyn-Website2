@@ -133,7 +133,7 @@ export default function Home() {
                 {/* Main image */}
                 <div className="animate-float">
                   <img 
-                    src="/assets/canva/1-1.png" 
+                    src="/assets/canva/up1.png" 
                     alt="Sevii App Screenshot" 
                     className="max-w-[950px] h-auto rounded-2xl"
                     style={{ maxWidth: 'min(950px, calc(100vw - 2rem))' }}
@@ -153,7 +153,7 @@ export default function Home() {
                 {/* Main image */}
                 <div className="animate-float">
                   <img 
-                    src="/assets/canva/1-1.png" 
+                    src="/assets/canva/up1.png" 
                     alt="Sevii App Screenshot" 
                     className="w-full max-w-[450px] h-auto rounded-2xl"
                   />
@@ -239,7 +239,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
-                  src="/assets/canva/collection.png" 
+                  src="/assets/canva/up4.png" 
                   alt="AI Interaction Screen" 
                   className="h-auto rounded-lg transform scale-[1.8] origin-center"
                   style={{ width: '100%', maxWidth: 'none' }}
@@ -251,7 +251,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 md:gap-16 lg:gap-12 items-center mb-32 md:mb-32 lg:mb-80">
               <div className="order-2 lg:order-1 flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
-                  src="/assets/canva/climb.png" 
+                  src="/assets/canva/up3.png" 
                   alt="Daily Quote Screen" 
                   className="h-auto rounded-lg transform scale-[1.8] origin-center"
                   style={{ width: '100%', maxWidth: 'none' }}
@@ -315,7 +315,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center overflow-visible py-16 lg:py-0">
                 <img 
-                  src="/assets/canva/screensaver.png" 
+                  src="/assets/canva/up2.png" 
                   alt="Screensaver Creator" 
                   className="h-auto rounded-lg transform scale-[1.8] origin-center"
                   style={{ width: '100%', maxWidth: 'none' }}

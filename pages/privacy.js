@@ -161,7 +161,7 @@ export default function Privacy() {
                     If you have any questions about this Privacy Policy or our data practices, please contact us at:
                   </p>
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                    <p><strong>Email:</strong> privacy@solyn.app</p>
+                    <p><strong>Email:</strong> latenitellc@gmail.com</p>
                     <p><strong>Address:</strong> Sevii Privacy Team</p>
                   </div>
                 </section>
